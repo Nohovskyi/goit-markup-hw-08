@@ -1,23 +1,42 @@
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-text-color);
   text-decoration: none;
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.2;
+  }
   &--dark {
     color: var(--logo-header-color);
   }
-  
+
   &--light {
     color: var(--secondary-text-color);
   }
 
   &--top {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    // margin-right: 93px;
+    @include tablet {
+      margin-right: 88px;
+    }
+    @include desktop {
+      margin-right: 93px;
+    }
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include tablet {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    @include desktop {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
 
   &--bottom {

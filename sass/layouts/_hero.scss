@@ -1,11 +1,19 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  max-width: 1600px;
+  width: 100%;
 
   background-color: var(--hero-bg-color);
   background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
     url(../images/hero.jpg);
-  max-width: 1600px;
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -19,12 +27,18 @@
     margin-right: auto;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
+
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--secondary-text-color);
+
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 
   &__btn {

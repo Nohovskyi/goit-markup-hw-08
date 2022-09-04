@@ -4,92 +4,152 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
 @import "../components/logo";
 
-.navigation__list {
+.menu__btn {
   display: flex;
-  column-gap: 50px;
-  color: var(--title-text-color);
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  fill: #000000;
+  transition: fill 250ms var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-text-color);
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.navigation__list {
+  display: none;
+  @include tablet {
+    display: flex;
+    column-gap: 50px;
+    color: var(--title-text-color);
+  }
 }
 
 .navigation__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: none;
+  @include tablet {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--title-text-color);
-  text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+    text-decoration: none;
 
-  transition: color 250ms var(--transition-timing-function);
+    transition: color 250ms var(--transition-timing-function);
 
-  &--active {
-    color: var(--accent-text-color);
-    position: relative;
-    &::after {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      display: inline-block;
+    &--active {
+      color: var(--accent-text-color);
+      position: relative;
+      &::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        display: inline-block;
 
-      content: "";
-      height: 4px;
-      width: 100%;
-      border-radius: 2px;
-      background-color: var(--accent-text-color);
+        content: "";
+        height: 4px;
+        width: 100%;
+        border-radius: 2px;
+        background-color: var(--accent-text-color);
+      }
     }
-  }
-  &:hover,
-  &:focus {
-    color: var(--accent-text-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
   }
 }
 
 .connects {
-  display: flex;
-  margin-left: auto;
-  column-gap: 50px;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+    }
+    margin-left: auto;
+    gap: 10px;
+    @include desktop {
+      column-gap: 50px;
+    }
+  }
 }
 
 .connects__link {
-  display: flex;
-  column-gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
+  display: none;
+  @include tablet {
+    display: flex;
+    gap: 10px;
+    @include desktop {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--main-text-color);
-  text-decoration: none;
+    align-items: center;
 
-  transition: color 250ms var(--transition-timing-function);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: var(--accent-text-color);
-    fill: currentColor;
+    transition: color 250ms var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+      fill: currentColor;
+    }
   }
 }
 
 .connects__icon--mail {
-  width: 16px;
-  height: 12px;
+  display: none;
 
-  fill: currentColor;
+  @include tablet {
+    display: block;
+    width: 14px;
+    height: 10px;
+
+    fill: currentColor;
+  }
+  @include desktop {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .connects__icon--tel {
-  width: 10px;
-  height: 16px;
+  display: none;
 
-  fill: currentColor;
+  @include tablet {
+    display: block;
+    width: 10px;
+    height: 14px;
+
+    fill: currentColor;
+  }
+  @include desktop {
+    width: 10px;
+    height: 16px;
+  }
 }
