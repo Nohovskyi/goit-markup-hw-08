@@ -4,18 +4,42 @@
   padding-bottom: 60px;
   &__container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: baseline;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
 .address {
   font-style: normal;
   &__text {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include tablet {
+      margin-bottom: 9px;
+    }
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+  }
+}
+
+// Додано для моб
+.contacts {
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -34,14 +58,31 @@
 }
 
 .contacts__item {
-  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  @include tablet {
+    margin-bottom: 9px;
+  }
+  @include desktop {
+    display: block;
+  }
   &:last-child {
     margin-bottom: 0;
   }
 }
 
 .social {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desktop {
+    margin-left: 70px;
+  }
 
   &__icon {
     width: 20px;
@@ -61,6 +102,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .social__list {
@@ -87,14 +132,45 @@
 
 .subscription {
   margin-left: auto;
+  margin-right: auto;
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
   &__form {
     display: flex;
-    column-gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    @include tablet {
+      display: block;
+    }
+    @include desktop {
+      display: flex;
+      gap: 12px;
+      justify-content: left;
+    }
+  }
+  &__label {
+    width: 100%;
+    @include tablet {
+      width: 450px;
+    }
+    @include desktop {
+      width: 358px;
+    }
   }
 }
 
 .subscription__input {
-  width: 358px;
+  width: 100%;
+  @include tablet {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    width: 358px;
+  }
   height: 50px;
   padding-left: 16px;
   padding-top: 15px;
@@ -121,6 +197,15 @@
   padding-right: 28px;
   height: 50px;
 
+  @include tablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,5 +230,21 @@
     background-color: transparent;
     fill: var(--accent-text-color);
     color: var(--accent-text-color);
+  }
+}
+
+.footer__wrap {
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+  @include desktop {
+    width: auto;
   }
 }

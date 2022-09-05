@@ -155,8 +155,14 @@ img {
   }
 }
 .logo--bottom {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .logo--bottom {
+    display: inline-block;
+  }
 }
 
 .menu__btn {
@@ -669,18 +675,49 @@ img {
 }
 .footer__container {
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: baseline;
+}
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .address {
   font-style: normal;
 }
 .address__text {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .address__text {
+    margin-bottom: 9px;
+  }
+}
+
+.contacts {
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .contacts {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .contacts__link {
@@ -696,14 +733,39 @@ img {
 }
 
 .contacts__item {
-  margin-bottom: 9px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__item {
+    margin-bottom: 9px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    display: block;
+  }
 }
 .contacts__item:last-child {
   margin-bottom: 0;
 }
 
 .social {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .social {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    margin-left: 70px;
+  }
 }
 .social__icon {
   width: 20px;
@@ -721,6 +783,13 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscription__title,
+.social__title {
+    text-align: left;
+  }
 }
 
 .social__list {
@@ -745,14 +814,48 @@ img {
 
 .subscription {
   margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .subscription {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .subscription__form {
   display: flex;
-  column-gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .subscription__form {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__form {
+    display: flex;
+    gap: 12px;
+    justify-content: left;
+  }
+}
+.subscription__label {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .subscription__label {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__label {
+    width: 358px;
+  }
 }
 
 .subscription__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   padding-top: 15px;
@@ -762,6 +865,17 @@ img {
   border-radius: 4px;
   background-color: transparent;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 768px) {
+  .subscription__input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    width: 358px;
+  }
 }
 .subscription__input::placeholder {
   font-family: inherit;
@@ -794,11 +908,43 @@ img {
   fill: var(--secondary-text-color);
   transition: border-color 250ms var(--transition-timing-function), color 250ms var(--transition-timing-function), fill 250ms var(--transition-timing-function);
 }
+@media screen and (min-width: 768px) {
+  .subscription__btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscription__btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .subscription__btn:hover, .subscription__btn:focus {
   border-color: var(--accent-text-color);
   background-color: transparent;
   fill: var(--accent-text-color);
   color: var(--accent-text-color);
+}
+
+.footer__wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .footer__wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrap {
+    width: auto;
+  }
 }
 
 .portfolio {
