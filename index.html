@@ -61,16 +61,16 @@
             </a>
           </li>
         </ul>
-        <button type="button" class="menu__btn menu-open-btn" data-menu-open>
+        <button type="button" class="menu__btn" data-menu-open>
           <svg id="menu" width="24" height="16">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
-        <div class="mob-menu is-hidden" data-menu>
-          <div class="menu-container">
-            <div class="mob-menu-top">
-              <button type="button" class="menu-close-btn" data-menu-close>
-                <svg class="icon-close">
+        <div class="menu is-hidden" data-menu>
+          <div class="menu__container">
+            <div class="menu--top">
+              <button type="button" class="menu__btn--close" data-menu-close>
+                <svg class="menu__icon--close">
                   <use href="./images/icons.svg#icon-close"></use>
                 </svg>
               </button>
@@ -91,58 +91,63 @@
               </nav>
             </div>
 
-           <div class="mob-menu-bottom"> <div class="mob-connect">
-              <ul class="menu__connects list">
-                <li class="menu__tel">
-                  <a href="tel:+380961111111" class="menu__tel--link">
-                    <p>+38 096 111 11 11</p>
-                  </a>
+            <div class="menu--bottom">
+              <div class="menu__connect">
+                <ul class="menu__connects list">
+                  <li class="menu__tel">
+                    <a href="tel:+380961111111" class="menu__link--tel">
+                      <p>+38 096 111 11 11</p>
+                    </a>
+                  </li>
+                  <li class="menu__mail">
+                    <a
+                      href="mailto:info@devstudio.com"
+                      class="menu__link--mail"
+                    >
+                      <p>info@devstudio.com</p></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <ul class="menu__list--soc list">
+                <li class="menu__item--soc">
+                  <a
+                    href=""
+                    class="menu__link--soc link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Instagram</a
+                  >
                 </li>
-                <li class="menu__mail">
-                  <a href="mailto:info@devstudio.com" class="menu__mail--link">
-                    <p>info@devstudio.com</p></a
+                <li class="menu__item--soc">
+                  <a
+                    href=""
+                    class="menu__link--soc link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="menu__item--soc">
+                  <a
+                    href=""
+                    class="menu__link--soc link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="menu__item--soc">
+                  <a
+                    href=""
+                    class="menu__link--soc link"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >LinkedIn</a
                   >
                 </li>
               </ul>
             </div>
-            <ul class="mob-soc-list list">
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Instagram</a
-                >
-              </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Twitter</a
-                >
-              </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Facebook</a
-                >
-              </li>
-              <li class="mob-soc-item">
-                <a
-                  href=""
-                  class="mob-soc-link link"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul></div>
           </div>
         </div>
       </div>

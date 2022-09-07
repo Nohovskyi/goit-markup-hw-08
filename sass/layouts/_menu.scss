@@ -1,24 +1,25 @@
-.mob-menu {
+.menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms var(--transition-timing-function),
     visibility 250ms var(--transition-timing-function);
 }
 
-.mob-menu.is-hidden {
+.menu.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  & .menu-container {
+  & .menu__container {
     transform: translate(-50%, -50%) scale(0);
   }
 }
 
-.menu-container {
+.menu__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,20 +37,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms var(--transition-timing-function);
-  &-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--main-background-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-  }
 }
 
-.menu-close-btn {
+.menu__btn--close {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -60,7 +50,7 @@
   cursor: pointer;
 }
 
-.icon-close {
+.menu__icon--close {
   width: 18.67px;
   height: 18.67px;
   position: absolute;
@@ -96,7 +86,7 @@
   }
 }
 
-.menu__tel--link {
+.menu__link--tel {
   font-weight: 500;
   font-size: 22px;
   @include mobile {
@@ -109,7 +99,7 @@
   text-decoration: none;
 }
 
-.menu__mail--link {
+.menu__link--mail {
   font-weight: 500;
   font-size: 18px;
   @include mobile {
@@ -125,11 +115,11 @@
   margin-bottom: 32px;
 }
 
-.mob-connect {
+.menu__connect {
   margin-bottom: 64px;
 }
 
-.mob-soc-link {
+.menu__link--soc {
   position: relative;
   font-weight: 500;
   font-size: 14px;
@@ -140,21 +130,10 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--accent-text-color);
-
-  &::after:not(:last-child) {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    right: -10px;
-    height: 100%;
-    width: 1px;
-    background-color: rgba(33, 33, 33, 0.2);
-  }
 }
 
 @include mobile {
-  .mob-soc-item {
+  .menu__item--soc {
     position: relative;
     &:not(:last-child)::after {
       content: "";
@@ -169,7 +148,7 @@
   }
 }
 
-.mob-soc-list {
+.menu__list--soc {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
