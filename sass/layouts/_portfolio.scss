@@ -62,7 +62,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  flex-grow: 1;
 }
 
 .portfolio-list-link {
@@ -132,6 +131,7 @@
 }
 
 .portfolio-list-name {
+  flex-grow: 1;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 20px;
