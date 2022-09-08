@@ -487,7 +487,7 @@ img {
   max-width: 1600px;
   width: 100%;
   background-color: var(--hero-bg-color);
-  background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero.jpg);
+  background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -500,18 +500,48 @@ img {
     padding-bottom: 200px;
   }
 }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-tab-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url(../images/hero-2x.jpg);
+  }
+}
 .hero__title {
   margin-bottom: 30px;
   max-width: 696px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -1166,6 +1196,22 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  flex-grow: 1;
+}
+
+.portfolio-list-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  outline: transparent;
+  transition: box-shadow 250ms var(--transition-timing-function);
+}
+.portfolio-list-link:hover, .portfolio-list-link:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.portfolio-list-link:hover .portfolio-overlay-text, .portfolio-list-link:focus .portfolio-overlay-text {
+  transform: translateY(0%);
 }
 
 .portfolio-works-item {
@@ -1212,19 +1258,6 @@ img {
   .portfolio-overlay-text {
     font-size: 18px;
   }
-}
-
-.portfolio-list-link {
-  display: block;
-  text-decoration: none;
-  outline: transparent;
-  transition: box-shadow 250ms var(--transition-timing-function);
-}
-.portfolio-list-link:hover, .portfolio-list-link:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.portfolio-list-link:hover .portfolio-overlay-text, .portfolio-list-link:focus .portfolio-overlay-text {
-  transform: translateY(0%);
 }
 
 .portfolio-list-name {
