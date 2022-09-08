@@ -18,6 +18,15 @@
   }
 }
 
+.footer__wrap {
+  @include tablet {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
 .address {
   font-style: normal;
   &__text {
@@ -40,6 +49,7 @@
   @include tablet {
     margin-right: 0;
     margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -79,6 +89,7 @@
   @include tablet {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 0;
   }
   @include desktop {
     margin-left: 70px;
@@ -170,6 +181,7 @@
   }
   @include desktop {
     width: 358px;
+    margin-bottom: 0;
   }
   height: 50px;
   padding-left: 16px;

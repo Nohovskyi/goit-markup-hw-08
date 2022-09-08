@@ -98,9 +98,11 @@
   @include tablet {
     display: flex;
     gap: 10px;
-    @include desktop {
-      padding-top: 32px;
-      padding-bottom: 32px;
+    &--mail {
+      padding-top: 20px;
+    }
+    &--tel {
+      padding-bottom: 20px;
     }
 
     align-items: center;
@@ -119,6 +121,10 @@
       color: var(--accent-text-color);
       fill: currentColor;
     }
+  }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
